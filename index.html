@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahnawaj Anwar | Modern Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Matrix Rain (for Matrix theme) -->
+  <div class="matrix-rain" id="matrixRain" style="display: none;"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Shahnawaj Anwar</a>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <div class="theme-selector">
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-palette"></i>
+          </button>
+          <div class="theme-dropdown" id="themeDropdown">
+            <div class="theme-option" data-theme="glass">
+              <div class="theme-color" style="background: #4facfe;"></div>
+              <span>Glass</span>
+            </div>
+            <div class="theme-option" data-theme="monochrome">
+              <div class="theme-color" style="background: #00ff88;"></div>
+              <span>Monochrome</span>
+            </div>
+            <div class="theme-option" data-theme="deep-space">
+              <div class="theme-color" style="background: #00f5ff;"></div>
+              <span>Deep Space</span>
+            </div>
+            <div class="theme-option" data-theme="lava">
+              <div class="theme-color" style="background: #ff4d4d;"></div>
+              <span>Lava</span>
+            </div>
+            <div class="theme-option" data-theme="quantum">
+              <div class="theme-color" style="background: #9d4edd;"></div>
+              <span>Quantum</span>
+            </div>
+            <div class="theme-option" data-theme="cyber">
+              <div class="theme-color" style="background: #00ffff;"></div>
+              <span>Cyber</span>
+            </div>
+            <div class="theme-option" data-theme="neon">
+              <div class="theme-color" style="background: #58a6ff;"></div>
+              <span>Neon</span>
+            </div>
+            <div class="theme-option" data-theme="sunset">
+              <div class="theme-color" style="background: #fd79a8;"></div>
+              <span>Sunset</span>
+            </div>
+            <div class="theme-option" data-theme="ocean">
+              <div class="theme-color" style="background: #00f5ff;"></div>
+              <span>Ocean</span>
+            </div>
+            <div class="theme-option" data-theme="matrix">
+              <div class="theme-color" style="background: #00ff41;"></div>
+              <span>Matrix</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mobile-menu-toggle" id="mobileToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="floating-elements">
+      <div class="floating-element">
+        <i class="fas fa-code" style="font-size: 2rem; color: var(--accent-primary);"></i>
+      </div>
+      <div class="floating-element">
+        <i class="fas fa-laptop-code" style="font-size: 2rem; color: var(--accent-secondary);"></i>
+      </div>
+      <div class="floating-element">
+        <i class="fas fa-rocket" style="font-size: 2rem; color: var(--accent-primary);"></i>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-subtitle">CEO AT ANWAR VENTURES</p>
+      <h1 class="hero-title">
+        Hello, I'm <span class="typing-animation" id="typingText">Shahnawaj Anwar</span>
+      </h1>
+      <p class="hero-description">
+        I'm smart. Give me a problem, I'll solve it before your coffee gets cold. 
+        Passionate about creating innovative solutions and building the future, one line of code at a time.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-envelope"></i>
+          Hire Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Me</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Discover my journey, passion, and the drive that fuels my innovation
+      </p>
+
+      <div class="about-grid">
+        <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+          <img src="./professional.jpg" alt="Shahnawaj Anwar" class="profile-img tilt-card">
+        </div>
+
+        <div class="about-content" data-aos="fade-left" data-aos-delay="300">
+          <h3>The Mind Behind the Code</h3>
+          <p>
+            I'm a 12th-grade management student majoring in Computer Science at Pashupati Multiple Campus, 
+            but don't let the "student" tag fool you — I've been coding for several years and have built 
+            my expertise through real-world projects and continuous learning.
+          </p>
+          <p>
+            My journey in technology started with curiosity and evolved into a passion for solving complex 
+            problems. I specialize in creating innovative solutions, from AI-powered applications to 
+            sophisticated web platforms that push the boundaries of what's possible.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring the latest tech trends, contributing to open-source 
+            projects, or mentoring fellow developers. I believe in the power of technology to transform lives 
+            and am committed to being part of that transformation.
+          </p>
+        </div>
+      </div>
+
+      <div class="stats-grid" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-item tilt-card">
+          <span class="stat-number" data-count="50">0</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item tilt-card">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item tilt-card">
+          <span class="stat-number" data-count="15">0</span>
+          <span class="stat-label">Technologies Mastered</span>
+        </div>
+        <div class="stat-item tilt-card">
+          <span class="stat-number" data-count="100">0</span>
+          <span class="stat-label">Client Satisfaction %</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        A comprehensive overview of my technical capabilities and proficiency levels
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-category tilt-card" data-aos="fade-up" data-aos-delay="200">
+          <h3><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skill-item">
+            <span class="skill-name">C++ & Algorithms</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Python</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Java</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category tilt-card" data-aos="fade-up" data-aos-delay="300">
+          <h3><i class="fas fa-globe"></i> Web Development</h3>
+          <div class="skill-item">
+            <span class="skill-name">HTML/CSS</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="95"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">React.js</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Node.js</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">MongoDB</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="70"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category tilt-card" data-aos="fade-up" data-aos-delay="400">
+          <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
+          <div class="skill-item">
+            <span class="skill-name">Machine Learning</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="80"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Deep Learning</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Natural Language Processing</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="65"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Computer Vision</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="60"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category tilt-card" data-aos="fade-up" data-aos-delay="500">
+          <h3><i class="fas fa-shield-alt"></i> Systems & Security</h3>
+          <div class="skill-item">
+            <span class="skill-name">Linux & Hyprland</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Cybersecurity</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="75"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Network Security</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="70"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span class="skill-name">Ethical Hacking</span>
+            <div class="skill-level">
+              <div class="skill-progress" data-progress="65"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        A showcase of my most innovative and impactful work
+      </p>
+
+      <div class="projects-grid">
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Modern Portfolio Website</h3>
+            <p class="project-description">
+              A cutting-edge, responsive portfolio with advanced animations, multiple themes, 
+              and interactive elements. Built with modern web technologies and optimized for performance.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">AOS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">AI Chatbot Assistant</h3>
+            <p class="project-description">
+              An intelligent conversational AI that provides helpful responses, occasionally adds humor, 
+              and learns from interactions. Features natural language processing and context awareness.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Try It Out
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-image">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Competitive Programming Toolkit</h3>
+            <p class="project-description">
+              A comprehensive suite of tools for competitive programming including template generators, 
+              automated testing, and performance optimization utilities.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Bash</span>
+              <span class="tech-tag">Automation</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-download"></i>
+                Download
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-image">
+            <i class="fab fa-linux"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Linux Rice Setup</h3>
+            <p class="project-description">
+              Custom Hyprland + Arch Linux configuration with beautiful aesthetics, optimized workflows, 
+              and productivity-focused customizations that impressed the r/unixporn community.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">Hyprland</span>
+              <span class="tech-tag">Waybar</span>
+              <span class="tech-tag">Shell</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-images"></i>
+                Screenshots
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Dotfiles
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-image">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Economics Data Dashboard</h3>
+            <p class="project-description">
+              Interactive data visualization platform that transforms complex economic data into 
+              beautiful, understandable charts and insights using modern web technologies.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">D3.js</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">API</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-chart-bar"></i>
+                View Dashboard
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="project-image">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Python Game Collection</h3>
+            <p class="project-description">
+              A collection of classic games reimagined with modern Python, featuring Snake, 
+              Tic-Tac-Toe, and Number Guessing games with advanced scoring systems and difficulty levels.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pygame</span>
+              <span class="tech-tag">Tkinter</span>
+              <span class="tech-tag">OOP</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-play"></i>
+                Play Games
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Achievements & Recognition</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Milestones and accomplishments that mark my journey in technology
+      </p>
+
+      <div class="achievements-grid">
+        <div class="achievement-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="achievement-title">Coding Competition Winner</h3>
+          <p class="achievement-description">
+            First place in regional programming contest with innovative algorithmic solutions
+          </p>
+        </div>
+
+        <div class="achievement-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="achievement-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="achievement-title">Open Source Contributor</h3>
+          <p class="achievement-description">
+            Active contributor to multiple open-source projects with 500+ GitHub contributions
+          </p>
+        </div>
+
+        <div class="achievement-card tilt-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="achievement-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3 class="achievement-title">AI/ML Certification</h3>
+          <p class="achievement-description">
+            Certified in Machine Learning and Artificial Intelligence from leading tech platforms
+          </p>
+        </div>
+
+        <div class="achievement-card tilt-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="achievement-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="achievement-title">Community Leader</h3>
+          <p class="achievement-description">
+            Founded and led programming club with 200+ active members and weekly workshops
+          </p>
+        </div>
+
+        <div class="achievement-card tilt-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="achievement-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3 class="achievement-title">Technical Excellence Award</h3>
+          <p class="achievement-description">
+            Recognized for outstanding technical innovation and project delivery excellence
+          </p>
+        </div>
+
+        <div class="achievement-card tilt-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="achievement-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 class="achievement-title">Startup Founder</h3>
+          <p class="achievement-description">
+            CEO and Founder of Anwar Ventures, driving innovation in technology solutions
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Ready to bring your ideas to life? Let's start a conversation
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+          <h3>Let's Connect</h3>
+          <p style="color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">
+            I'm always excited to discuss new opportunities, innovative projects, or just chat about technology. 
+            Whether you have a project in mind or want to explore possibilities, I'd love to hear from you.
+          </p>
+
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <p>shahnawajanwar11@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone</strong>
+              <p>+977 9704105263</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong>
+              <p>linkedin.com/in/anwar</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Location</strong>
+              <p>Kathmandu, Nepal</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" data-aos="fade-left" data-aos-delay="300" id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" required placeholder="Tell me about your project or just say hello..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="social-links" data-aos="fade-up">
+        <a href="#" class="social-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="social-link" title="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link" title="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="mailto:shahnawajanwar11@gmail.com" class="social-link" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="copyright" data-aos="fade-up" data-aos-delay="100">
+        <p>&copy; 2025 Shahnawaj Anwar. Crafted with <i class="fas fa-heart" style="color: var(--accent-primary);"></i> and lots of ☕</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Designed & Developed for the Future</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
